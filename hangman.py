@@ -1,6 +1,7 @@
 # Hard-code a word that needs to be guessed in the script
 
-from itertools import count
+
+from calendar import c
 
 
 guess_word = "hello"
@@ -15,41 +16,44 @@ You only have few attempts
 
 #Display the word as a sequence of blanks, e.g. "_ _ _ _ _" for "hello"
 
-for letter in guess_word:
-    print("_", end=" ")
+
 
 
 
 #Create a counter for how many tries a user has
+
+
+word_list = ["_","_","_","_","_"]
 counter = 0
-word = ""
 
 while counter != 10:
-    #Ask for user input
-    #Allow only single-character alphabetic input
+    for letter in word_list:
+        print(letter, end =" ")
+    
     alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     while True:
         user_input = str.lower(input("\nInsert a single-character alphabetic input:"))
         if user_input in alphabet:
             break
-    #check if user_input is the same as a letter in a word
-    for letter in guess_word:
-        if user_input == letter:
-            word = letter
         else:
-            word = "_"
+            print("wrong input, try again")
+    if user_input in guess_word:
+        for index,letter in enumerate(guess_word):
+            if user_input == letter:
+                word_list[index] = user_input
+                print("You got the letter right")
+    else:
+        counter += 1
+        print (f"You got it wrong, you have {10 - counter} options left.")   
 
-    # blindspot the rest
-    for letter in guess_word():
-        if letter == word:
-            print(letter, end=" ")
 
+    conactenated_word = word_list[0] + word_list[1] + word_list[2] + word_list[3] + word_list[4]
 
-    if word ==guess_word:
+    if conactenated_word == guess_word:
+        print("You have won! Congratulations!")
         break
+
+if counter == 10:
+    print("You have lost the game!")
+
     
-    counter += 1
-
-
-
-

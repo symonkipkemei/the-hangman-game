@@ -72,11 +72,13 @@ Images will be added later on
 - In development
 
 ## Features
-- Add more no of guess words randomly
-- improve on the cli interface
+- Make it playful
 
 ## TODO
-- Make it playful
+- Add more no of guess words randomly
+- improve on the cli interface
+- Random losing quotes when a user looses
+- 
 
 
 <CONTRIBUTING>

@@ -39,6 +39,9 @@ Hangman is a classic CLI (command line interface) game that allows a user to gue
 
 
 ## Hardware Requirements
+- You will need a desktop or a laptop computer
+- RAM: A minimum of 4GB RAM is recommended
+- Disk Space: You should have at least 5GB free of space on your working hard drive
 
 ## Software Requirements
 
@@ -61,7 +64,7 @@ To get this project up and running locally, you must already have python plus th
 
 <h1 id="illus">Illustrations</h1>
 
-Images will be added later on
+![The game interface](interface.PNG)
 
 
 <PROJECT-INFORMATION>
